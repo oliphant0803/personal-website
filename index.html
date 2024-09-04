@@ -1,0 +1,74 @@
+---
+layout: default
+
+---
+{% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h1 style="position:relative;margin-top:-5px">Alex Mariakakis</h1>
+    <ul class="bxslider">
+      <!-- note: imgs can have links around them -->
+      <!-- <li><img src="{{site.base_url}}/images/slider/sage.jpg" title=""/></li> -->
+      <li><img src="{{site.base_url}}/images/slider/biliscreen_glasses.jpg" title=""/></li>
+      <li><img src="{{site.base_url}}/images/slider/boards_demo.png" title=""/></li>
+      <li><img src="{{site.base_url}}/images/slider/lab_discussion.jpg" title=""/></li>
+      <li><img src="{{site.base_url}}/images/slider/shwetak_discussion.jpg" title=""/></li>
+    </ul>
+  </div>
+  <div class="col-md-6 news">
+    <h2>News</h2>
+    {% include news_list.html num_items=5 %}
+    <a href="{{site.base_url}}/news/">(More news...)</a>
+    <br/><br/>
+
+    <h2>Contact Info</h2>
+    <b>Email:</b> {{ site.email }}
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>My Background</h2>
+    <p>
+      I am an Assistant Professor in the <a href="https://web.cs.toronto.edu/" target="_blank">Department of Computer Science</a> at the <a href="https://www.utoronto.ca/" target="_blank">University of Toronto</a> and an Affiliate Scientist at <a href="https://technainstitute.com/" target="_blank">Techna</a>. 
+      I run the <a href="https://chai-toronto.github.io/">Computational Health and Interaction (CHAI)</a> lab, which leverages ubiquitous and emergent technologies to address problems related to people’s health and wellbeing.
+      My main research focus is on health-related sensing. 
+      Using sensor data collected from momentary assessments or passive recordings, I employ signal processing and machine learning to generate digital biomarkers related to a person's physiology, context, and behavior. 
+      My work also spans other topics at the intersection of ubiquitous computing and human-computer interaction, such as mobile interaction, user-centered design, and novel sensing techniques.
+    </p>
+
+    <p>
+      Before joining the University of Toronto, I completed a joint-postdoctoral role under <a href="https://www.linkedin.com/in/larsson-omberg-75912610/">Larsson Omberg</a> and <a href="https://ischool.uw.edu/people/faculty/profile/anind">Anind Dey</a>, where I split my time between the <a href="https://sagebionetworks.org/">Sage Bionetworks</a> and the <a href="http://www.cs.washington.edu/">School of Computer Science and Engineering</a> at the <a href="http://www.washington.edu/">University of Washington</a>.
+      I completed my PhD at the University of Washington under the advising of <a href="https://homes.cs.washington.edu/~shwetak/">Shwetak Patel</a> and <a href="http://faculty.washington.edu/wobbrock/">Jacob O. Wobbrock</a>. 
+      I completed my undergraduate studies at <a href="http://www.duke.edu/">Duke University</a> with a double major in <a href="http://www.ece.duke.edu/">Electrical and Computer Engineering</a> and <a href="http://www.cs.duke.edu/">Computer Science</a>.
+      During that time, I conducted research under <a href="http://croy.web.engr.illinois.edu/">Romit Roy Choudhury</a>.
+    </p>
+      
+    <h2>Recruiting</h2>
+    <p>
+      <!-- I am actively looking for motivated people to join my research group. 
+      I enjoy working with people from diverse backgrounds, so I encourage anyone who is interested in working with me to fill out this <a href="https://forms.gle/g4TxzvQcxD4JB8MJ8" target="_blank">form</a>. -->
+      I have a sizable cohort of graduate students at this time, so it is highly unlikely that I will be recruiting new MSc or PhD candidates during the 2023–2024 academic year.
+      However, exceptions may be made for students who have already demonstrated the ability to conduct research in the areas of HCI or ubiquitous computing.
+    </p>
+    <p>
+      For information about undergraduate recruiting in the CHAI lab, please refer to the following <a href="https://chai-toronto.github.io/get_involved/">page</a>.
+    </p>
+    
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+  $('.bxslider').bxSlider({
+    adaptiveHeight: false,
+    speed: 500,
+    captions: true,
+    auto: true,
+    pause: 5000,
+    autoControls: true
+    });
+});
+</script>

@@ -1,0 +1,9 @@
+---
+layout: page
+title: News
+---
+
+{% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+
+<h1>News</h1>
+{% include news_list.html num_items=-1 %}

@@ -1,0 +1,15 @@
+current directory: /Users/h2o/Documents/Resume/personal-website/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/h2o/.rubies/ruby-3.1.3/bin/ruby -I /Users/h2o/.rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/h2o/Documents/Resume/personal-website/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240907-97374-xezfur sitelibdir\=./.gem.20240907-97374-xezfur clean
+
+current directory: /Users/h2o/Documents/Resume/personal-website/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240907-97374-xezfur sitelibdir\=./.gem.20240907-97374-xezfur
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/h2o/Documents/Resume/personal-website/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240907-97374-xezfur sitelibdir\=./.gem.20240907-97374-xezfur install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240907-97374-xezfur/racc

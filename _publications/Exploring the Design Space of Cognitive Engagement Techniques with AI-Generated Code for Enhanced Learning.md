@@ -6,7 +6,7 @@ authors:
 - Sangho Suh
 - Austin Z. Henley
 - Tovi Grossman
-venue: WristSense Workshop, $PERCOM$
+venue: ACM Conference on Intelligent User Interfaces (ACM IUI)
 date: 2024-10-12
 link: https://arxiv.org/pdf/2410.08922
 thumbnail: /images/pubs/IUI2025.png

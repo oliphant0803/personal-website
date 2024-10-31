@@ -7,7 +7,7 @@ authors:
 - Austin Z. Henley
 - Tovi Grossman
 venue: WristSense Workshop, $PERCOM$
-date: 2025
+date: 2024-10-12
 link: https://arxiv.org/pdf/2410.08922
 thumbnail: /images/pubs/IUI2025.png
 keywords: Human-AI Collaboration, CS Education

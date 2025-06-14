@@ -23,7 +23,7 @@ const Navbar = () => {
 
   // Navigation links - updated as requested
   const navLinks = [
-    { name: 'Publications', url: '/publications', weight: 20 },
+    { name: 'All Publications', url: '/publications', weight: 20 },
     { name: 'Travels', url: '/travels', weight: 25 },
     { name: 'C.V.', url: 'static/uploads/resume.pdf', weight: 30 }
   ];

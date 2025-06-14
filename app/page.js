@@ -2,9 +2,9 @@ export default function Home() {
   return (
     <div className="home-container">
       <section className="bio-section">
-        <h2>Bio</h2>
+        <h2><Annotated text="Bio" imageNumber={2} /></h2>
         <p>
-          I'm <strong className="highlight-text">Oliver</strong>, a first-year Master of Science student in Computer Science at the{' '}
+          I'm <Annotated text="Oliver" imageNumber={1} />, a first-year Master of Science student in Computer Science at the{' '}
           <a href="https://web.cs.toronto.edu/" target="_blank" rel="noopener noreferrer" className="styled-link">
             University of Toronto
           </a>
@@ -47,8 +47,8 @@ export default function Home() {
       </section>
 
       <section className="publications-section">
-        <h2>Conference Papers</h2>
-        <div className="featured-publications">
+        <h2><Annotated text="Recent Papers" imageNumber={3} /></h2>
+        <div className="featured-publications-container">
           <PublicationsList maxCount={3} />
         </div>
         <div className="section-link">
@@ -61,8 +61,23 @@ export default function Home() {
   );
 }
 
+// Annotated Text Component
+function Annotated({ text, imageNumber }) {
+  // Convert imageNumber to styleNumber (1-7) to use different highlight styles
+  const styleNumber = ((imageNumber - 1) % 7) + 1;
+  
+  return (
+    <span className={`brush-highlight brush-style-${styleNumber}`}>
+      {text}
+    </span>
+  );
+}
+
 // Component to render a limited list of publications with focus on conference papers
 function PublicationsList({ maxCount = 3 }) {
+  // Import PdfTeaser component
+  const PdfTeaser = require('@/components/PdfTeaser').default;
+  
   // Import data if running in browser
   const publicationsData = require('@/data/publications.json');
   
@@ -90,35 +105,54 @@ function PublicationsList({ maxCount = 3 }) {
   };
 
   return (
-    <div className="conference-papers-list">
+    <div className="publications-list">
       {conferencePapers.map((pub) => (
-        <div className="publication-card" key={pub.id}>
-          <div className="publication-header">
-            <span className="venue-shortname">{pub.venue.shortName}</span>
-            <h3 className="publication-title">{pub.title}</h3>
+        <div className="publication-item" key={pub.id}>
+          <div className="publication-content">
+            <div className="paper-title-line">
+              <span className="venue-shortname">{pub.venue.shortName}</span> {pub.title}
+            </div>
+          
+            
+            <div className="venue-fullname">
+              {pub.venue.fullName}
+            </div>
+            <p className="authors">{formatAuthors(pub.authors)}</p>
+            
+            {pub.abstract && (
+              <p className="abstract">{pub.abstract}</p>
+            )}
+            <div className="publication-links">
+              {pub.links.pdf && (
+                <a href={pub.links.pdf} target="_blank" rel="noopener noreferrer" className="pub-link pdf-link">PDF</a>
+              )}
+              {pub.links.code && (
+                <a href={pub.links.code} target="_blank" rel="noopener noreferrer" className="pub-link code-link">Code</a>
+              )}
+              {pub.links['try-live'] && (
+                <a href={pub.links['try-live']} target="_blank" rel="noopener noreferrer" className="pub-link try-live-link">Try Live</a>
+              )}
+              {pub.links.presentation && (
+                <a href={pub.links.presentation} target="_blank" rel="noopener noreferrer" className="pub-link presentation-link">Presentation</a>
+              )}
+              {pub.links.project && (
+                <a href={pub.links.project} target="_blank" rel="noopener noreferrer" className="pub-link">Project Page</a>
+              )}
+              {pub.links.doi && (
+                <a href={pub.links.doi} target="_blank" rel="noopener noreferrer" className="pub-link">DOI</a>
+              )}
+            </div>
           </div>
-          
-          <p className="authors">{formatAuthors(pub.authors)}</p>
-          
-          {pub.tags && pub.tags.length > 0 && (
-            <div className="pub-tags">
-              {pub.tags.map((tag, index) => (
-                <span key={index} className="pub-tag">{tag}</span>
-              ))}
+          {pub.links.pdf && (
+            <div className="publication-teaser">
+              <a href={pub.links.pdf} target="_blank" rel="noopener noreferrer" aria-label={`View ${pub.title} PDF`}>
+                <PdfTeaser 
+                  pdfUrl={pub.links.pdf}
+                  title={pub.title}
+                />
+              </a>
             </div>
           )}
-          
-          <div className="publication-links">
-            {pub.links.pdf && (
-              <a href={pub.links.pdf} target="_blank" rel="noopener noreferrer" className="pub-link pdf-link">PDF</a>
-            )}
-            {pub.links.code && (
-              <a href={pub.links.code} target="_blank" rel="noopener noreferrer" className="pub-link code-link">Code</a>
-            )}
-            {pub.links.doi && (
-              <a href={pub.links.doi} target="_blank" rel="noopener noreferrer" className="pub-link">DOI</a>
-            )}
-          </div>
         </div>
       ))}
     </div>

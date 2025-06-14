@@ -10,13 +10,13 @@
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(107, 158, 231, 0.15);
 }
 
 .scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(92, 148, 227, 0.18);
   padding: 0.8rem 0;
 }
 
@@ -160,7 +160,7 @@
     height: 100vh;
     background-color: white;
     border-radius: 0;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 10px rgba(98, 151, 229, 0.16);
     padding: 80px 20px 20px;
     transition: right 0.3s ease;
     display: block;
@@ -184,10 +184,12 @@
   .navbar {
     background-color: rgba(30, 30, 30, 0.7);
     border: 1px solid rgba(70, 70, 70, 0.5);
+    box-shadow: 0 4px 15px rgba(65, 105, 178, 0.2);
   }
   
   .scrolled {
     background-color: rgba(25, 25, 25, 0.95);
+    box-shadow: 0 4px 20px rgba(59, 99, 173, 0.25);
   }
 
   .logoText,
@@ -214,5 +216,10 @@
 
   .nav {
     background-color: #121212;
+  }
+  
+  .mobileNav {
+    background-color: #1a1a1a;
+    box-shadow: -2px 0 10px rgba(52, 92, 164, 0.25);
   }
 }

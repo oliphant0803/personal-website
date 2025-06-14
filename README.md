@@ -1,14 +1,14 @@
-# [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic)
+# Oliver Huang's Personal Website
 
-[![Screenshot](./preview.png)](https://wowchemy.com/hugo-themes/)
+This is my personal website built with Next.js, showcasing my profile, research, publications, and other professional activities.
 
-The Hugo **Academic Resumé Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
+## Features
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://wowchemy.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/wowchemy?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
-
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+- Modern, responsive design with a clean interface
+- Dynamic sidebar with profile information and latest updates
+- Highlighted paper links in the updates section
+- Light and dark mode support
+- Mobile-friendly layout
 
 Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
 
